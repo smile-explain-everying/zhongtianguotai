@@ -1,0 +1,230 @@
+@charset "utf-8";
+/*分页共通样式*/
+@import  "components/_banner.scss"; 
+
+%indexlayout {
+	width:1200px;
+	margin:0 auto;
+	padding:0px;
+}
+
+.content{
+
+	.title{
+		line-height: 70px;
+		border-bottom: 1px solid #e5e5e5;
+		margin-bottom: 37px;
+		.layout{
+            position: relative;
+		}
+		.la_fl{
+			position: relative;
+			width: 870px;
+			a{
+				padding-right: 30px;
+			}
+		}
+		.la_fr{
+			position: relative;
+			width: 330px;
+		}
+		span{
+			position: absolute;
+			left: 0;
+		    bottom: -1px;
+			display: inline-block;
+			font-size:20px;
+			border-bottom: 1px solid $seColor;
+		}
+		a{
+			color: #333;
+			padding-right: 15px;
+			&:hover{
+				color:$seColor;
+			}
+		}
+	}
+	.product{
+		height: 600px;
+		padding-bottom: 20px;
+		.product_list{
+			width:245px;
+			height: 100%;
+			background: $seColor;
+			ul{
+				padding: 60px 30px;
+				li{
+					padding-top: 40px;
+					a{
+						color: #fff;
+					}
+				}
+				.name{
+					padding-top:0;
+					text-align: center;
+					color: #fff;
+					font-size:26px;
+					font-weight: 800;
+					padding-bottom: 20px;
+					border-bottom: 1px solid #4dd8db;
+				}
+			}
+		}
+		.product_item{
+			width: 955px;
+			height: 100%;
+			background: #f9f9f9;
+			ul{
+				float: left;
+				width: 450px;
+				height: 100%;
+				padding: 7px 0;
+				box-sizing: border-box;
+				li{
+                  width: 100%;
+                  height: 50%;
+                  a{
+                  	width: 100%;
+                    height: 50%;
+                   &:hover{
+                   	 p{
+                    	color: $seColor;
+                    }
+                   }
+                  }
+                  .photo{
+                  	width:100%;
+                  	height:255px;
+                  	img{
+                  		width:100%;
+                  	    height:100%;
+                  	}
+                  }
+                  p{
+                  	color: #000;
+                  	padding-top: 5px;
+                  }
+				}
+			}
+			ul:first-child{
+				margin-left:20px;
+			}
+			ul:last-child{
+				margin-left:35px;
+			}
+		}
+	}
+	.news{
+		height: 260px;
+		padding-bottom: 20px;
+		.news_list{
+			width: 870px;
+			height: 100%;
+			float: left;
+			.news_item{
+				width: 365px;
+				height: 100%;
+				float: left;
+				a{
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					&:hover{
+						.info{
+							color:$seColor;
+						}
+					}
+					img{
+						width: 100%;
+						height: 135px;
+					}
+					.info{
+						height: 125px;
+						span{
+							display: block;
+							padding: 5px 0;
+						}
+						p{
+							height: 65px;
+							overflow: hidden;
+						}
+					}
+				}
+			}
+			ul{
+				float: left;
+				width: 460px;
+				height: 100%;
+				padding:0 30px 0 15px;
+				li{
+					width: 100%;
+					height:37px;
+					line-height: 37px;
+					border-bottom:1px dotted #dadada;
+					a{
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						&:hover{
+							span{
+								color:$seColor;
+							}
+						}
+						i{
+							width: 3px;
+							height: 5px;
+							float: left;
+							margin:15px 5px 0 15px;
+							background-position: -104px 0;
+						}
+						.cn_text{
+							display: inline-block;
+							width: 345px;
+						}
+						.cn_data{
+							display: inline-block;
+							color: #afacac;
+							font-size: 12px;
+							float: right;
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+		}
+		.culture{
+			width: 330px;
+			height: 100%;
+			ul{
+				width: 180px;
+				float: left;
+				padding-left: 10px;
+				box-sizing: border-box;
+				li{
+					padding-bottom: 10px;
+					span{
+						display: block;
+					}
+					.english,.name{
+						font-size: 16px;
+						color: #cacaca;
+						font-weight: 800;
+					}
+					.name{
+                        color: $seColor;
+					}
+					p{
+						font-size: 12px;
+					}
+				}
+			}
+			.cu_img{
+				float: left;
+				width: 150px;
+				height: 150px;
+				margin-top: 55px;
+				background: url(../images/culture.png);
+			}
+		}
+	}
+}

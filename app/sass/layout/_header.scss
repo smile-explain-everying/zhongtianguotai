@@ -1,0 +1,81 @@
+/*zh 2016 0310*/
+@import  "helpers/_mixins.scss"; 
+@charset "utf-8";
+.topbar{
+	font-size:12px;
+	line-height:32px;
+	border-bottom: 1px solid #f2f2f2;
+	background-color: #fafafa;
+	color:#666;
+	.layout{ 
+		
+		.bar_right{
+			float:right;
+			color:$whiteColor;
+			ul{
+				li{
+					float:left;
+					a,span{
+						color:#666;
+					}
+					span.font_or{
+						color: #ff6600;
+					}
+					i{
+						width:17px;
+						height: 17px;
+				        background: url(../images/phone.png);
+				        background-size:100% 100%;
+				        margin-right: 10px;
+					}
+				}
+				li:last-child{
+					margin-right:15px;
+				}
+                em{
+                	display: inline-block;
+                	width:1px;
+                	height: 13px;
+                	margin:10px 12px 0;
+                	float: left;
+                	background: #dbccdb;
+                }
+			}
+		}
+	}
+}
+.nav{
+	height:147px;
+	.nav_left{
+		float:left;
+		height:99px;
+		.logo{
+			display:inline-block;
+			width:650px;
+			height:147px;
+		}
+	}
+	.nav_right{
+		float:right;
+		line-height:147px;
+		li{
+			float:left;
+			text-align:right;
+			cursor: pointer;
+			padding:0 13px;
+			height:99px;
+			a{
+				font-size:16px;
+				&:hover{
+					color:$seColor;
+				}
+			}
+			a.active{
+				color:$seColor;
+			}
+		}
+	}
+}
+
+
+

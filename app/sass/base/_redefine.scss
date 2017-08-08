@@ -1,0 +1,252 @@
+/* *********PC端********** */
+//基本样式
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;padding:0;
+}
+ul, ol {
+    list-style:none;
+} 
+li{
+    list-style-type:none 
+}
+body {
+    font:14px/1.5 $pcFont; 
+    width:100%;
+    color: $defaultColor;
+    overflow-x:hidden;
+    background-color:$whiteColor;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $whiteColor;
+    @include user-select;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+}
+
+html,body{ 
+    min-height:101%;
+} 
+html{ overflow:-moz-scrollbars-vertical;}
+
+/* 清除点击出现虚拟框 */
+a{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    &:focus{
+        outline:0;
+    }
+    &:link, 
+    &:visited {
+        color: $defaultColor;
+        text-decoration:none;
+    }
+}
+a img {
+    border:none;
+}
+input, textarea, select {
+    outline:none;
+    font:12px/1.5 $pcFont;
+}
+input:disabled{
+    background-color: rgb(235, 235, 228);
+}
+fieldset,img{
+    border:0;
+}
+
+abbr,acronym{
+    border:0;
+    font-variant:normal;
+}
+
+caption,th{
+    text-align:left;
+}
+audio,canvas,video{
+    display:inline-block;
+    *display:inline;*zoom:1;
+}
+
+/* 统一上标和下标 */
+sub,sup{
+    font-size:75%;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline;
+}
+sup{
+    top:-0.5em;
+}
+sub{
+    bottom:-0.25em;
+}
+
+ins,a{
+    text-decoration:none;
+    cursor:pointer;
+    outline:medium none;
+}
+
+table,tr{
+    border-collapse: collapse;
+}
+
+/* 清除浮动 */
+.clearfix, .layout{
+    *zoom:1;
+    &:after {
+        display:block;
+        content:"\200B";
+        clear:both;
+        height:0;
+    }
+}
+
+.layout{
+    width:1200px;
+    margin:0 auto;
+}
+
+.fn-fl{
+    float:left;
+}
+
+.fn-tc{
+   text-align: center;
+}
+
+.fn-tl{
+   text-align: left;
+}
+
+.fn-tr{
+   text-align: right;
+}
+
+.fn-fr{
+    float:right;
+}
+
+.mt10{
+    margin-top:10px;
+}
+
+.mt20{
+    margin-top:20px;
+}
+.ml20{
+    margin-left:20px;
+}
+
+.mt30{
+    margin-top:30px;
+}
+.mt40{
+    margin-top:40px;
+}
+.fn-rmb{
+    font-family:arial;
+    font-style:normal;
+    padding-right:4px;
+}
+
+/*zx  2017/3/13*/
+
+/* 单行文字溢出时出现省略号，需设定宽度 */ 
+.fn_text_overflow{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+/*按钮样式*/
+.btn_status_false{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    -moz-border-radius:20px; 
+    -khtml-border-radius:20px; 
+    -webkit-border-radius:20px; 
+    border-radius:20px;
+    background: $seColor;
+    font-size: 18px;
+    span{
+        color: #fff;
+    }
+    &:hover{
+        background: #feae32;
+    }
+}
+.btn_status_true{
+   display: inline-block;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   -moz-border-radius:20px; 
+   -khtml-border-radius:20px; 
+   -webkit-border-radius:20px; 
+   border-radius:20px;
+   background: #ccc;
+   font-size: 18px;
+   cursor: default;
+   span{
+        color: #fff;
+    }
+}
+.btn{
+    display:inline-block;
+    text-align:center;
+}
+
+/*提示框样式*/
+
+.confirm_div3{
+        position: absolute;
+        width: 600px;
+        height: 390px;
+        margin-left: -260px;
+        left: 50%;
+        top: 30%;
+        z-index: 2200;
+        background-color: rgba(0,0,0,.5);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+    .confirm_div3 img{
+        width: 550px;
+        height: 350px;
+        margin:20px 25px;
+    }
+.navalist{
+    background-color:$whiteColor;
+    position: relative;
+    .layout{
+        li{
+            float:left;
+            width:64px;
+            height:54px;
+            text-align:center;
+            padding:0 40px;
+            &:nth-child(1){
+                margin-left:-40px;
+            }
+            a{
+                display:block;
+                line-height:54px;
+                font-size:16px;
+                color:#5e5e5e;
+            }
+        }
+        li.active{
+            a{
+                color:$seColor;
+                border-bottom:2px solid $seColor;
+                z-index:10;
+            }
+        }
+    }
+}    
